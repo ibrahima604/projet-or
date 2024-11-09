@@ -39,9 +39,27 @@ ctaButton.addEventListener('mouseout', () => {
 
 // Initialisation des particules
 document.addEventListener('DOMContentLoaded', createParticles);
-let burger=document.getElementById("burger");
-let navbar=document.querySelector(".nav-links");
-burger.addEventListener("click",()=>{
+let burger = document.getElementById("burger");
+let navLinks = document.querySelector(".nav-links");
+
+burger.addEventListener("click", () => {
     burger.classList.toggle("toggle");
-    navbar.classList.toggle("nav-active");
-})
+    navLinks.classList.toggle("nav-active");
+});
+
+function handleResize() {
+    if (window.innerWidth > 768) {
+        navLinks.classList.remove("nav-active");
+        burger.classList.remove("toggle");
+    } else {
+        // Optionnel : Ajouter la classe si la largeur est inférieure à 768px et le menu burger est actif
+        // if (navLinks.classList.contains("nav-active") && !burger.classList.contains("toggle")) {
+        //     burger.classList.add("toggle");
+        // }
+    }
+}
+
+window.addEventListener("resize", handleResize);
+
+// Exécuter la fonction handleResize lors du chargement pour s'assurer que l'état initial est correct
+handleResize();

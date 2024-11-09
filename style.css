@@ -188,6 +188,8 @@ a{
 #burger{
     display: none;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
     transition: all 0.3s ease;
 }
 ul li{
@@ -199,18 +201,26 @@ ul li{
     .nav-links{
         display: none;
         flex-direction: column;
-        width: 100vw;
+        width: 70vw;
         height: 100vh;
         position: absolute;
-        top: 80px;
+        top: 0;
         right: 0;
-        background-color: #000;
+        background-color:gray;
 
     }
     .nav-links li{
         text-align: center;
         padding: 5px;
+
+     
     }
+    .nav-links li a{
+        box-shadow:rgba(255, 255, 255, 10);
+        
+
+    }
+    
     #burger{
         display: block;
     }
@@ -218,6 +228,7 @@ ul li{
 .nav-active { 
     display: flex !important; 
     flex-direction: column; 
+    border-radius: 50px;
     animation: navLinkFade 0.5s ease forwards; 
 }
 @keyframes navLinkFade { from { opacity: 0;
