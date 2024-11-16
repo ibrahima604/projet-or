@@ -63,3 +63,41 @@ window.addEventListener("resize", handleResize);
 
 // Exécuter la fonction handleResize lors du chargement pour s'assurer que l'état initial est correct
 handleResize();
+// Pour la disponibilité
+function saveAvailability() {
+    const days = ["monday", "tuesday"]; // Ajouter les autres jours ici
+    let availability = {};
+
+    days.forEach(day => {
+        const isAvailable = document.getElementById(day).checked;
+        const startTime = document.getElementById(`${day}_start`).value;
+        const endTime = document.getElementById(`${day}_end`).value;
+
+        if (isAvailable && startTime && endTime) {
+            availability[day] = {
+                start: startTime,
+                end: endTime
+            };
+        }
+    });
+
+    console.log("Disponibilités enregistrées :", availability);
+    alert("Disponibilités enregistrées !");
+}
+//Pour l'API OR
+const apiKey = 'goldapi-5rnqdsm3j23thj-io';  // Remplace par ta clé API valide
+
+fetch('http://localhost:3000/gold-rate')
+        .then(response => response.json())
+        .then(data => {
+            if (data.price) {
+                const goldRate = data.price;
+                document.getElementById('goldRate').innerHTML = `Le taux de l'or aujourd'hui est de $${goldRate} USD par once.`;
+            } else {
+                document.getElementById('goldRate').innerHTML = "Données non disponibles.";
+            }
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+            document.getElementById('goldRate').innerHTML = "Erreur lors de la récupération du taux.";
+        });

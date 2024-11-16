@@ -1,54 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>L'Or Magique</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="nav-bar">
-        <a href="#" class="logo">
-            <img src="/api/placeholder/40/40" alt="Logo">
-            <span>Or</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="#">Acceuil</a></li>
-            <li><a href="#">Nos Services</a></li> 
-            <li><a href="#">Collaboration</a></li>
-            <li><a href="#">Contact</a></li>
-            <!-- <button class="menu-button">
+      <a href="#" class="logo">
+        <img src="/api/placeholder/40/40" alt="Logo" />
+        <span>Or</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="#">Nos Services</a></li>
+        <li><a href="#">Collaboration</a></li>
+        <li><a href="#">Contact</a></li>
+        <!-- <button class="menu-button">
                 <span>Acceuil</span>
                 <span>Services</span>
                 <span>Contact</span>
             </button> -->
-        </ul>
-        
-        <div id="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+      </ul>
 
-        </div>
+      <div id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </nav>
 
     <main class="content">
-        <h1>Gold & FRERES-SARLU</h1>
-        <p class="subtitle">Découvrez les secrets du commerce de l'or et les taux du jour !</p>
-        <a href="#" class="cta-button">Commencer maintenant</a>
+      <h1>Gold & FRERES-SARLU</h1>
+      <p class="subtitle">
+        Découvrez les secrets du commerce de l'or et les taux du jour !
+      </p>
+      <a href="#" class="cta-button">Commencer maintenant</a>
     </main>
 
     <button class="add-button">+</button>
 
     <div class="particles-container" id="particles"></div>
-    <main class="content1">
-        <h2>Qui Sommes-Nous ?</h2>
-        <p>Bienvenue chez Kanté & frères, votre expert en or ! Nous ne vendons pas seulement de l'or, nous vendonsdes
-            rêves, des investissements et un peu de bling-bling !</p>
-    </main>
-</body>
 
+    <main class="content1">
+      <h2>Qui Sommes-Nous ?</h2>
+      <p>
+        Bienvenue chez Or Magique, votre expert en or ! Ici, nous ne vendons pas
+        seulement de l'or, nous offrons des rêves, des investissements et une
+        touche de bling-bling ! Notre équipe est composée de passionnés d'or qui
+        comprennent l'importance de chaque gramme. Nous sommes là pour vous
+        guider dans l'univers scintillant du commerce de l'or avec le sourire et
+        un brin d'humour. Nous croyons que l'or n'est pas simplement un métal
+        précieux, mais une aventure. Rejoignez-nous et transformez votre
+        curiosité en opportunité !
+      </p>
+    </main>
+    <section class="tauxjour">
+      <h2>Votre Taux du Jour</h2>
+      <div id="imgor">
+      <img src="Or.jpg" alt="Image_d'or">
+      <img src="Or2.jpg" alt="Image_d'or">
+      </div>
+      
+      <p id="goldRate">Chargement du taux de l'or...</p>
+    </section>
+    <section class="availability">
+      <h2>Mes disponibilités</h2>
+
+      <div class="day">
+        <label for="monday">Lundi :</label>
+        <input type="checkbox" id="monday" />
+        <input type="time" id="monday_start" placeholder="Début" />
+        <input type="time" id="monday_end" placeholder="Fin" />
+      </div>
+
+      <div class="day">
+        <label for="tuesday">Mardi :</label>
+        <input type="checkbox" id="tuesday" />
+        <input type="time" id="tuesday_start" placeholder="Début" />
+        <input type="time" id="tuesday_end" placeholder="Fin" />
+      </div>
+      <div class="day">
+        <label for="Mercredi">Mercredi :</label>
+        <input type="checkbox" id="tuesday" />
+        <input type="time" id="mercredi_start" placeholder="Début" />
+        <input type="time" id="mercredi_end" placeholder="Fin" />
+      </div>
+
+      <!-- Ajoute plus de jours de la semaine de la même manière -->
+
+      <button onclick="saveAvailability()">
+        Enregistrer les disponibilités
+      </button>
+    </section>
+  </body>
 </html>

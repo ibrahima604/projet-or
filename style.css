@@ -4,14 +4,17 @@
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
+section{
+    background-color: white;
+}
+
 
 body {
-    background: #000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: white;
-    overflow: hidden;
+    /* overflow: hidden;  */
     position: relative;
 }
 
@@ -20,12 +23,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 10;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 50px;
     margin: 1rem;
+    background: #000;
 
 }
 
@@ -43,18 +48,6 @@ body {
     border-radius: 50%;
 }
 
-/* .menu-button {
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 5px;
-} */
-
 .menu-button span {
     display: block;
     width: 100%;
@@ -69,6 +62,8 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
+    background: #000;
+    border-radius: 50px;
    
 }
 
@@ -178,7 +173,7 @@ a{
     font-weight: 700;
     color: gold;
 }
-#burger .line{
+#burger div{
     width: 30px;
     height: 5px;
     background-color: white;
@@ -237,3 +232,52 @@ ul li{
      .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); } 
      .toggle .line2 { opacity: 0; } 
      .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+.availability {
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+}
+.day {
+        margin-bottom: 15px;
+    }
+.day label{
+    color: black;
+}
+label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+input[type="time"] {
+        width: 100px;
+        margin-left: 5px;
+    }
+.availability h2,.tauxjour h2{
+    color: black;
+    text-align: center;
+}
+.tauxjour {
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.tauxjour img {
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    display: block;
+}
+
+#imgor {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    align-items: center; /* Centre les images verticalement */
+    gap: 20px; /* Ajoute un espace de 20px entre les images */
+    margin-bottom: 20px; /* Ajoute un peu d'espace en bas des images */
+}
+
+#goldRate {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
